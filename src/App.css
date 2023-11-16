@@ -1,0 +1,61 @@
+.Navbar {
+  align-items: center;
+  padding: 2% 10%;
+  position: relative;
+  height: 5vh;
+}
+
+.App-wrapper {
+  height: auto;
+}
+
+.App {
+  text-align: center;
+}
+
+.dark-mode::after {
+  color: white;
+}
+
+.light-mode {
+  background-color: #72c6b2;
+  color: black;
+  transition: 0.5s ease;
+}
+
+.dark-mode {
+  background: linear-gradient(to left, rgb(31, 28, 59), rgb(0, 0, 0));
+  color: white;
+  transition: 2s ease-in-out;
+}
+
+.dark-mode .btn {
+  background-color: rgb(68, 63, 114);
+    color: white;
+}
+
+.dark-mode .somatotal {
+  border: 1px solid white;
+}
+
+.dark-mode a {
+  color: white;
+}
+
+.dark-mode ::after {
+  background-color: white;
+}
+
+.dark-mode link {
+  background-color: white;
+}
+
+.dark-mode .buttons a {
+  background-color: rgb(68, 63, 114);
+  color: white;
+}
+
+.dark-mode .link {
+  background-color: rgb(68, 63, 114);
+  color: white;
+}

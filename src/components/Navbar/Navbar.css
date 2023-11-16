@@ -1,0 +1,36 @@
+.Navbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link {
+    display: inline-block;
+    background-color: #6c9dc3;
+    border-radius: 17px;
+    text-decoration: none;
+    padding: 8px;
+    margin: 0 8px;
+    color: black;
+}
+
+.Navbar li {
+    list-style: none;
+    transition: transform 0.5s ease-in-out;
+}
+
+.Navbar li:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+@media(max-width: 768px){
+    .link{
+        font-size: 12px;
+        padding: 4px;
+        margin: 4px;
+    }
+    .Navbar button {
+        height: 20px;
+        width: 20px;
+    }
+}

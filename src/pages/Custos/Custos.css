@@ -1,0 +1,50 @@
+.custos-wrapper{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.custos {
+    display: flex;
+    justify-content: center;
+    padding: 6vh 6vw;
+}
+
+.btn {
+    padding: 6px;
+    border: none;
+    border-radius: 100vh;
+    background-color: #6c9dc3;
+}
+
+.forms input {
+    margin: 4px;
+}
+
+.forms-custos {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 1vw;
+    padding: 2vh 2vw;
+    width: 22vw;
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 5vh;
+}
+
+.soma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) and (orientation: portrait){
+    .custos{
+        display: grid;
+    }
+
+    .forms-custos {
+        width: 80vw;
+    }
+}

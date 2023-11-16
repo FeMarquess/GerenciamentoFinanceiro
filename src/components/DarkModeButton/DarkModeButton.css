@@ -1,0 +1,10 @@
+.dark-mode-toggle {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+}
+
+body.dark-mode #dark-mode-toggle {
+    color: #ffffff;
+}

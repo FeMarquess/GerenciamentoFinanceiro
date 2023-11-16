@@ -1,0 +1,20 @@
+.listavariado {
+    margin: 18px 0;
+}
+
+.quantidadecusto {
+    margin: 18px 0;
+}
+
+.listavariado li {
+    list-style: none;
+}
+
+.lista-btn {
+    margin: 0 4px;
+    height: 2vw;
+    width: 2vw;
+    border-radius: 1vw;
+    background-color: rgb(255, 69, 69);
+    border: none;
+}
