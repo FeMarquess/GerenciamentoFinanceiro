@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import "./FormularioEntrada.css";
 
-interface FormularioEntradaProps {
-  aoEntradaSubmetido: (nome: string, valor: number, quantidade: number) => void;
+interface FormularioCustoProps {
+  aoCustoSubmetido: (nome: string, valor: number, quantidade: number) => void;
 }
 
-const FormularioEntrada: React.FC<FormularioEntradaProps> = ({ aoEntradaSubmetido }) => {
+const FormularioCustoVariado: React.FC<FormularioCustoProps> = ({ aoCustoSubmetido }) => {
   const [nome, setNome] = useState("");
-  const [valor, setValor] = useState<string>("");
+  const [valor, setValor] = useState("");
   const [quantidade, setQuantidade] = useState<string>("");
 
   const handleNomeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,8 +31,8 @@ const FormularioEntrada: React.FC<FormularioEntradaProps> = ({ aoEntradaSubmetid
     e.preventDefault();
     const valorNumero = parseFloat(valor);
     const quantidadeNumero = parseFloat(quantidade);
-    if (!isNaN(valorNumero) && !isNaN(quantidadeNumero)) {
-      aoEntradaSubmetido(nome, valorNumero, quantidadeNumero);
+    if (!isNaN(valorNumero)) {
+      aoCustoSubmetido(nome, valorNumero, quantidadeNumero);
       setNome("");
       setValor("");
       setQuantidade("");
@@ -55,10 +54,10 @@ const FormularioEntrada: React.FC<FormularioEntradaProps> = ({ aoEntradaSubmetid
             />
           </div>
           <div>
-            <label className="label" htmlFor="valor">Valor: </label>
+            <label className="label" htmlFor="valor">Valor:</label>
             <input
               required
-              type="text"
+              type="string"
               id="valor"
               value={valor}
               onChange={handleInputChange}
@@ -81,4 +80,4 @@ const FormularioEntrada: React.FC<FormularioEntradaProps> = ({ aoEntradaSubmetid
   );
 };
 
-export default FormularioEntrada;
+export default FormularioCustoVariado;

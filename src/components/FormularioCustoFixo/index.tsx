@@ -4,7 +4,7 @@ interface FormularioCustoProps {
   aoCustoSubmetido: (nome: string, valor: number) => void;
 }
 
-const FormularioCusto: React.FC<FormularioCustoProps> = ({ aoCustoSubmetido }) => {
+const FormularioCustoFixo: React.FC<FormularioCustoProps> = ({ aoCustoSubmetido }) => {
   const [nome, setNome] = useState("");
   const [valor, setValor] = useState("");
 
@@ -60,4 +60,4 @@ const FormularioCusto: React.FC<FormularioCustoProps> = ({ aoCustoSubmetido }) =
   );
 };
 
-export default FormularioCusto;
+export default FormularioCustoFixo;

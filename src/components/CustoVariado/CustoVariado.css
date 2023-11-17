@@ -18,3 +18,16 @@
     background-color: rgb(255, 69, 69);
     border: none;
 }
+
+.lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+
+.forms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

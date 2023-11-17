@@ -11,24 +11,19 @@ interface Props {
 }
 
 function Entrada({ onSomaEntradaChange }: Props) {
-  const [entradas, setEntradas] = useState<{ nome: string; valor: number }[]>([]);
-  const [quantidade, setQuantidade] = useState<number>(0);
+  const [entradas, setEntradas] = useState<{ nome: string; valor: number; quantidade: number; valorAntesMultiplicacao: number }[]>([]);
   const [somaEntrada, setSomaEntrada] = useState<number>(0);
   const [listaExpandida, setListaExpandida] = useState<boolean>(false);
 
   useEffect(() => {
-    const novoTotal = entradas.reduce((acc, entrada) => acc + entrada.valor * quantidade, 0);
+    const novoTotal = entradas.reduce((acc, entrada) => acc + entrada.valor, 0);
     setSomaEntrada(novoTotal);
     onSomaEntradaChange(novoTotal);
-  }, [entradas, quantidade, onSomaEntradaChange]);
+  }, [entradas, onSomaEntradaChange]);
 
-  const handleEntradaSubmetido = (nome: string, valor: number) => {
-    const novoEntrada = { nome, valor };
+  const handleEntradaSubmetido = (nome: string, valor: number, quantidade: number) => {
+    const novoEntrada = { nome, valor: valor * quantidade, quantidade, valorAntesMultiplicacao: valor };
     setEntradas([...entradas, novoEntrada]);
-  };
-
-  const handleSaveQuantidade = (novoQuantidade: number) => {
-    setQuantidade(novoQuantidade);
   };
 
   const handleExcluirEntrada = (index: number) => {
@@ -44,30 +39,26 @@ function Entrada({ onSomaEntradaChange }: Props) {
     <section>
       <div>
         <h2>Entrada</h2>
+        <div className="forms">
         <FormularioEntrada aoEntradaSubmetido={handleEntradaSubmetido} />
+        </div>
         <div className="listaentrada">
           <h4>Lista de Entradas:</h4>
           <button className="btn" onClick={handleToggleLista}>
             {listaExpandida ? "Esconder Lista" : "Mostrar Lista"}
           </button>
+          {listaExpandida && (
           <div>
-            {listaExpandida && (
-              <div>
-                {entradas.map((entrada, index) => (
-                  <div key={index}>
-                    {entrada.nome}: R$ {entrada.valor.toFixed(2)}
-                    <button className="lista-btn" onClick={() => handleExcluirEntrada(index)}>
-                      <FontAwesomeIcon icon={faTrash} />
-                    </button>
-                  </div>
-                ))}
+            {entradas.map((entrada, index) => (
+              <div className="lista" key={index}>
+                {entrada.nome}: R$ {entrada.valorAntesMultiplicacao.toFixed(2)}, {entrada.quantidade}
+                <button className="lista-btn" onClick={() => handleExcluirEntrada(index)}>
+                  <FontAwesomeIcon icon={faTrash} />
+                </button>
               </div>
-            )}
+            ))}
           </div>
-        </div>
-        <div className="quantidade-entrada">
-          <NumberInput onSaveQuantidade={handleSaveQuantidade} />
-          <h4>Quantidade de saída: {quantidade}</h4>
+        )}
         </div>
         <div>
           <ExibirSomaEntrada somaEntrada={somaEntrada} />

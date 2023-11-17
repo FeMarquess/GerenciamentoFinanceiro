@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import FormularioCusto from "../FormularioCusto";
+import FormularioCustoFixo from "../FormularioCustoFixo";
 import ExibirSomaFixo from "../SomaFixo";
 import "./CustoFixo.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -37,7 +37,7 @@ function CustoFixo({ onSomaFixoChange }: Props) {
   return (
     <div>
       <h2>Custo Fixo</h2>
-      <FormularioCusto aoCustoSubmetido={handleCustoSubmetido} />
+      <FormularioCustoFixo aoCustoSubmetido={handleCustoSubmetido} />
       <div className="listafixo">
       <h4>Lista de Custos Fixos:</h4>
       <button className="btn" onClick={handleToggleLista}>
