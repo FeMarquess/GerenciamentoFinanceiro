@@ -1,46 +1,42 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Gerenciamento Financeiro
 
-## Available Scripts
+Esta aplicação foi criada com o objetivo de fornecer uma ferramenta simples e eficaz para o cálculo de custos em uma empresa, aplicando conceitos de administração e utilizando as tecnologias modernas como React e TypeScript.
+## Funcionalidades
 
-In the project directory, you can run:
+- Temas dark e light
+- Preview em tempo real
+- Calcular entrada, saída e lucro
+- Visualização da lista
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Deploy
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Deploy desse projeto em https://gerenciamento-financeiro-git-main-femarquess.vercel.app/
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Stack utilizada
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Front-end:** React, TypeScript
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Aprendizados
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Durante o desenvolvimento deste projeto, tive a oportunidade de aprender e aprimorar minhas habilidades em várias áreas:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**TypeScript**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Aprofundei meus conhecimentos em TypeScript, uma linguagem que proporciona tipagem estática ao JavaScript, oferecendo mais robustez e prevenindo erros comuns durante o desenvolvimento.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**React**
 
-## Learn More
+Aprimorei minhas habilidades em React, explorando conceitos avançados, como componentes controlados, hooks, e a construção de interfaces de usuário dinâmicas e eficientes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**CSS**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Refinei minhas habilidades em estilização de componentes usando CSS, garantindo uma apresentação visual atraente e responsiva para a aplicação.
+
+Esses aprendizados foram fundamentais para o sucesso do projeto, proporcionando uma base sólida para futuros desenvolvimentos e aprimorando minha experiência como desenvolvedor.
+
